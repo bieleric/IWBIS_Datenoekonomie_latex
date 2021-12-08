@@ -1,0 +1,198 @@
+\documentclass[
+ openright,
+ %twoside, % beidseitig für Druck
+ a4paper
+]{scrreprt}
+%scrreprt
+\input{htwcd/htwcd_content.sty}
+
+% Vorgaben zum Seitenrand	
+\geometry{
+	top=30mm, 
+	bottom=30mm, 
+	%headsep=15mm, 
+	inner=40mm, 
+	outer=20mm, 
+	%left=40mm,
+	%right=20mm,
+	%footskip=15mm,
+}
+
+\usepackage{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+\ofoot{\pagemark}
+\raggedbottom
+
+% Codierung
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}	% Anführungszeichen
+\usepackage{amssymb}
+
+% Grafiken
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{float}
+\usepackage{longtable}
+
+% Quelltext
+\usepackage{listings}
+\usepackage{scrhack}
+
+% Links
+\usepackage{xurl}
+\usepackage[bookmarks,%
+bookmarksopen=false,% Klappt die Bookmarks in Acrobat aus
+colorlinks=true,%
+linkcolor=black,%
+citecolor=black,%
+urlcolor=black,%
+]{hyperref}
+
+\usepackage{datetime}
+
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,shadings}
+\usetikzlibrary{arrows}
+
+% ======================================================
+% Informationen für das Dokument und Titelseite:
+% ======================================================
+\faculty{Fakultät Informatik/Mathematik}
+
+\title{Datenökonomie}
+\subtitle{Welche Möglichkeiten gibt es für Personen, aktiv ihre Daten ökonomisch zu verwerten? }
+
+\author{
+	Maria Mukian\\
+	Philipp Steigler\\
+	Eric Hans Gero Biele
+}
+
+\professor{Prof. Dr. Jürgen Anke}
+
+\newdate{abgabe}{26}{01}{2021}
+\date{\displaydate{abgabe}}
+% ======================================================
+
+
+% ======================================================
+% Literatur/Quellen und Akronyme/Glossar:
+% ======================================================
+\usepackage[
+backend=bibtex,
+sortlocale=de_DE, 
+bibencoding=utf8,
+style=numeric, 
+citestyle=numeric,
+doi=false,
+isbn=false,
+url=false,
+sorting=nty
+]{biblatex}	% BibTeX
+\bibliography{Bibliography}
+
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\input{Glossar.tex}
+% ======================================================
+\pagenumbering{roman}
+
+\begin{document}
+% ==============================================
+% Deckblatt
+% ==============================================
+\maketitle
+
+% ==============================================
+% Abstract
+% ==============================================
+\setcounter{page}{1}
+\pagenumbering{gobble}
+\input{Abstract}
+
+% ==============================================
+% Verzeichnisse:
+% ==============================================
+% Inhaltsverzeichnis
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+% Abkürzungsverzeichnis
+% ACHTUNG: Akronyme und Glossar muss (ähnlich wie bibtex) extra kompiliert werden über makeglossaries (in texmaker bspw. "makeglossaries %")
+\printglossary[type=\acronymtype]
+\addcontentsline{toc}{chapter}{Akronyme}
+% Glossar
+\printglossary[type=main]
+\addcontentsline{toc}{chapter}{Glossar}
+% Abbildungsverzeichnis
+\listoffigures
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+% Tabellenverzeichnis
+\listoftables
+\addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+
+% ==============================================
+% Textteil
+% Richtlinie: 25-40 Seiten
+% \section{}, \subsection{}, \subsubsection{}
+% ==============================================
+\clearpage
+\pagenumbering{arabic}
+\chapter{Einleitung}
+% * Einleitung
+\input{Motivation.tex}
+% * Forschungsfrage
+\input{Forschungsfrage.tex}
+% * Methodik
+\input{Methodik.tex}
+
+
+\chapter{Grundlagen}
+% * Datenschutz
+\input{Datenschutz.tex}
+% * Datenökonomie
+\input{Datenökonomie.tex}
+
+\chapter{Fallanalyse}
+
+\chapter{Vergleich}
+
+\chapter{Diskussion}
+
+\chapter{Zusammenfassung}
+
+% ==============================================
+% Literaturverzeichnis
+% ==============================================
+\nocite{*}
+\printbibliography
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+% ==============================================
+% Anhang
+% ==============================================
+\appendix
+\chapter*{Anlagen} \label{Anlagen}
+\addcontentsline{toc}{chapter}{Anlagen}
+\setcounter{chapter}{1} 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{Bilddatei}
+\caption{Bildbeschreibung}
+\label{fig:Bildlabel}
+\end{figure}
+
+% Endblatt (weiß)
+\clearpage
+\thispagestyle{empty}
+\begin{center}
+\vfill
+\phantom{© \makeatletter\@author\makeatother}
+\end{center}
+
+\end{document}

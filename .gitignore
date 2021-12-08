@@ -1,0 +1,24 @@
+# Compiled source #
+###################
+*.acn
+*.aux
+*.bcf
+*.dvi
+*.glo
+*.ist
+*.lof
+*.txt
+*.lot
+*.out
+*.ps
+*.pdf
+*.xml
+*.toc
+*.log
+*.acr
+*.alg
+*.bbl
+*.blg
+*.glg
+*.gls
+*.gz
