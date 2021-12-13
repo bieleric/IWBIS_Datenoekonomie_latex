@@ -9,3 +9,10 @@
 
 ## Hinweise für VS Code
 - Mit der Tastenkombination `Alt + Z` werden in VS Code die Wörter gewrappt
+- PDF öffnen: Tex-Plugin öffnen -> Commands -> View LaTex PDF oder im Explorer die IWBIS_Datenoekonomie.pdf öffnen
+
+## Grundlagen LaTex
+**Überschriften:** `\chapter{*}`, `\section{*}`, `\subsection{*}`, `\subsubsection{*}`
+**Zitate:** Quelle in der Bibliography.bib hinzufügen und mit `\cite{*}` in den Fließtext einbinden
+**Glossar:** Glossareintrag in der Glossaar.tex hinzufügen und mit `\gls{*}` in den Fließtext einbinden
+**neue Datei einbinden:** neue Datei `*.tex` erstellen und an gewünschter Stelle in der IWBIS_Datenoekonomie.tex per `\input{*.tex}` einbinden
