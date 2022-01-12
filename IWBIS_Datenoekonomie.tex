@@ -30,6 +30,10 @@
 \usepackage[ngerman]{babel}
 \usepackage{csquotes}	% Anführungszeichen
 \usepackage{amssymb}
+\usepackage{pifont}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
 
 % Grafiken
 \usepackage{graphicx}
@@ -37,6 +41,14 @@
 \usepackage{float}
 \usepackage{longtable}
 \usepackage{placeins}
+
+% Tabellen
+\usepackage{makecell}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 
 % Quelltext
 \usepackage{listings}
@@ -155,7 +167,7 @@ sorting=nty
 % * Datenökonomie
 \input{Kapitel_Grundlagen/Datenökonomie.tex}
 
-\chapter{Fallanalyse}
+\chapter{Fallstudie}
 % * Erklärung zur Auswahl der Fallbeispiele
 \input{Kapitel_Fallanalyse/Erklärung.tex}
 % * BitaAboutMe
@@ -165,7 +177,8 @@ sorting=nty
 % * Invisibly
 \input{Kapitel_Fallanalyse/Invisibly.tex}
 
-\chapter{Diskussion der Ergebnisse}
+\chapter{Diskussion und Ergebnisse}
+\input{Kapitel_Diskussion/Ergebnisse.tex}
 
 \chapter{Zusammenfassung}
 
