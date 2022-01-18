@@ -30,12 +30,25 @@
 \usepackage[ngerman]{babel}
 \usepackage{csquotes}	% Anführungszeichen
 \usepackage{amssymb}
+\usepackage{pifont}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
 
 % Grafiken
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 \usepackage{float}
 \usepackage{longtable}
+\usepackage{placeins}
+
+% Tabellen
+\usepackage{makecell}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 
 % Quelltext
 \usepackage{listings}
@@ -50,6 +63,7 @@ linkcolor=black,%
 citecolor=black,%
 urlcolor=black,%
 ]{hyperref}
+\usepackage{titleref}
 
 \usepackage{datetime}
 
@@ -152,16 +166,25 @@ sorting=nty
 \input{Kapitel_Grundlagen/Datenschutz.tex}
 % * Datenökonomie
 \input{Kapitel_Grundlagen/Datenökonomie.tex}
+% * Wert der Daten
+\input{Kapitel_Grundlagen/Wert_der_Daten.tex}
 
-\chapter{Fallanalyse}
+\chapter{Fallstudie}
 % * Erklärung zur Auswahl der Fallbeispiele
 \input{Kapitel_Fallanalyse/Erklärung.tex}
-% * BitsaboutMe
-\input{Kapitel_Fallanalyse/BitsaboutMe.tex}
+% * Payback
+\input{Kapitel_Fallanalyse/Payback.tex}
+% * Kaufland
+\input{Kapitel_Fallanalyse/Kaufland.tex}
+% * BitaAboutMe
+\input{Kapitel_Fallanalyse/BitsAboutMe.tex}
+% * Datum
+\input{Kapitel_Fallanalyse/Datum.tex}
 % * Invisibly
 \input{Kapitel_Fallanalyse/Invisibly.tex}
 
-\chapter{Diskussion der Ergebnisse}
+\chapter{Diskussion und Ergebnisse}
+\input{Kapitel_Diskussion/Ergebnisse.tex}
 
 \chapter{Zusammenfassung}
 
