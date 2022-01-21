@@ -11,10 +11,10 @@ Datum zielt mit dem Projekt darauf ab, die im Kapitel \ref{Motivation} Motivatio
 	\item Die Daten sind monetarisiert werden
 	\item Die Daten werden dezentralisiert gespeichert
 	\item Die Daten werden anonymisiert
-	\item Der Nutzer besitzt die Kontrolle daüber, welche Daten genutzt werden, wie lange die Daten genutzt werden und wie die zukünftige Verwendung der Daten erfolgt 
+	\item Der Nutzer besitzt die Kontrolle darüber, welche Daten genutzt werden, wie lange die Daten genutzt werden und wie die zukünftige Verwendung der Daten erfolgt 
 \end{enumerate}
 
-\noindent Aus Käufersicht möchte das Unternehmen eine gute Datenqualität garantieren, indem die Daten der Nutzer validiert werden, um somit verlässliche und aussagekräftige Daten für Prognosen oder andere Verwendungszwecke zu liefern. Dafür soll sich auf das Datum-Netzwerk verlassen werden und im Zusammenhang damit ein \textit{Trust-Ranking-System} implementieren. Für die Validierung schlägt das Unternehmen weitere Validierungsdienste wie \textit{Civic} oder \textit{uPort} vor.
+\noindent Aus Käufersicht möchte das Unternehmen eine gute Datenqualität garantieren, indem die Daten der Nutzer validiert werden, um somit verlässliche und aussagekräftige Daten für Prognosen oder andere Verwendungszwecke zu liefern. Dafür soll sich auf das Datum-Netzwerk verlassen werden und im Zusammenhang damit ein \textit{Trust-Ranking-System} implementiert werden. Das heißt, es soll zukünftig eine Bewertungsmöglichkeit zur Qualität der angebotenen Daten geben, um somit ein Ranking für besonders vertrauenswürdige Daten erstellen zu können. Für die konkrete Validierung der Daten schlägt das Unternehmen stattdessen weitere externe Validierungsdienste wie \textit{Civic} oder \textit{uPort} vor, um beispielsweise Identitäten verifizieren zu können.
 
 \begin{figure}[!ht]
 	\centering
@@ -42,12 +42,12 @@ Datum zielt mit dem Projekt darauf ab, die im Kapitel \ref{Motivation} Motivatio
 	\item Das \textit{Datum-Network-Trust-Rating}
 \end{enumerate}
 
-\noindent \textbf{DAT-Token-Holder:} DAT-Token-Holder steuern das Netzwerk und ermöglichen Trankaktionen in dem Netzwerk. \newline
+\noindent \textbf{DAT-Token-Holder:} DAT-Token-Holder steuern das Netzwerk und ermöglichen Trankaktionen in dem Netzwerk. Die DAT-Token selbst dienen als Währung, um Daten kaufen, verkaufen oder überhaupt speichern und anbieten zu können. Der Wert eines DAT-Token liegt aktuell bei 0,000070€. (Stand: 20.01.2022 \cite{DAT_Token_price}) \newline
 
 \noindent \textit{Hinweis: Auf weitere Rollen, wie beispielsweise Storage Nodes wird im Folgenden nicht eingegangen, da sich diese vorwiegend mit der technischen Komponente einer Blockchain befassen und im Sinne der Datenökonomie weniger relevant sind.}
 
 \subsection{Daten im Datum-Netzwerk monetarisieren}
-Nun stellt sich wiederum die Frage, wie die Nutzer ihr Geld aktiv verkaufen und somit zu Geld machen können. Dafür sieht das Netzwerk folgendes Protokoll vor:\newline
+Nun stellt sich wiederum die Frage, wie die Nutzer ihre Daten aktiv verkaufen und somit zu Geld machen können. Dafür sieht das Netzwerk folgendes Protokoll vor:\newline
 
 \noindent Zuerst muss der Nutzer seine Daten mit der Client-Software (Android- oder iOS-App) dem Netzwerk preisgeben. Diese werden jedoch davor verschlüsselt, wodurch nur der Nutzer selbst Zugriff auf die Daten hat. Die verschlüsselten Daten werden daraufhin an mehrere \textit{Storage Nodes} gesendet und sind damit repliziert. Nun kann ein Datenkonsument sein Interesse für die veröffentlichten Daten eines Nutzers äußern. Daraufhin erhält der Nutzer, also der Datenanbieter, eine Kaufanfrage für die übermittelten Konditionen des Datenkonsumenten. Ist er damit einverstanden, kann der Datenanbieter das Angebot annehmen. Ebenso kann dieser auch ein Gegenangebot an den Datenkonsumenten schicken. Kommt ein Geschäft zustande, so sendet der Datenkonsumenten DAT-Token als Währung an den Nutzer, welcher im Gegenzug den Schlüssel zur Entschlüsselung seiner Daten oder einem Teil seiner Daten veräußert.
 Das Geschäft kann dabei als Einmalkauf abgewickelt werden oder in Form eines Abonnements. \cite{datum_2017} \newline
