@@ -43,6 +43,9 @@
 \usepackage{placeins}
 
 % Tabellen
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{tabularx}
 \usepackage{makecell}
 
 \renewcommand\theadalign{bc}
@@ -203,15 +206,9 @@ sorting=nty
 % ==============================================
 \appendix
 \chapter*{Anlagen} \label{Anlagen}
+\input{Kapitel_Anlagen/Anlagen.tex}
 \addcontentsline{toc}{chapter}{Anlagen}
-\setcounter{chapter}{1} 
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=\textwidth]{Bilddatei}
-\caption{Bildbeschreibung}
-\label{fig:Bildlabel}
-\end{figure}
+\setcounter{chapter}{1}
 
 % Endblatt (weiß)
 \clearpage
