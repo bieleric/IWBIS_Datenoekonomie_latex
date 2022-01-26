@@ -1,7 +1,7 @@
 \documentclass[
- openright,
- %twoside, % beidseitig für Druck
- a4paper
+	openright,
+	%twoside, % beidseitig für Druck
+	a4paper
 ]{scrreprt}
 %scrreprt
 \input{htwcd/htwcd_content.sty}
@@ -59,18 +59,17 @@
 
 % Links
 \usepackage{xurl}
-\usepackage[bookmarks,%
-bookmarksopen=false,% Klappt die Bookmarks in Acrobat aus
-colorlinks=true,%
-linkcolor=black,%
-citecolor=black,%
-urlcolor=black,%
+\usepackage[
+	bookmarks,%
+	bookmarksopen=false,% Klappt die Bookmarks in Acrobat aus
+	colorlinks=true,%
+	linkcolor=black,%
+	citecolor=black,%
+	urlcolor=black,%
 ]{hyperref}
+
 \usepackage{titleref}
-
 \usepackage{datetime}
-
-
 \usepackage{tikz}
 \usetikzlibrary{positioning,shadings}
 \usetikzlibrary{arrows}
@@ -94,20 +93,19 @@ urlcolor=black,%
 \date{\displaydate{abgabe}}
 % ======================================================
 
-
 % ======================================================
 % Literatur/Quellen und Akronyme/Glossar:
 % ======================================================
 \usepackage[
-backend=bibtex,
-sortlocale=de_DE, 
-bibencoding=utf8,
-style=numeric, 
-citestyle=numeric,
-doi=false,
-isbn=false,
-url=false,
-sorting=nty
+	backend=bibtex,
+	sortlocale=de_DE, 
+	bibencoding=utf8,
+	style=numeric, 
+	citestyle=numeric,
+	doi=false,
+	isbn=false,
+	url=false,
+	sorting=nty
 ]{biblatex}	% BibTeX
 \bibliography{Bibliography}
 
@@ -158,32 +156,22 @@ sorting=nty
 % ==============================================
 \clearpage
 \pagenumbering{arabic}
+
 \chapter{Einleitung}
-% * Einleitung
 \input{Kapitel_Einleitung/Motivation.tex}
-% * Ziel und Methodik
 \input{Kapitel_Einleitung/Methodik.tex}
 
 \chapter{Grundlagen}
-% * Datenschutz
 \input{Kapitel_Grundlagen/Datenschutz.tex}
-% * Datenökonomie
 \input{Kapitel_Grundlagen/Datenökonomie.tex}
-% * Wert der Daten
 \input{Kapitel_Grundlagen/Wert_der_Daten.tex}
 
 \chapter{Fallstudie}
-% * Erklärung zur Auswahl der Fallbeispiele
 \input{Kapitel_Fallanalyse/Erklärung.tex}
-% * Payback
 \input{Kapitel_Fallanalyse/Payback.tex}
-% * Kaufland
 \input{Kapitel_Fallanalyse/Kaufland.tex}
-% * BitaAboutMe
 \input{Kapitel_Fallanalyse/BitsAboutMe.tex}
-% * Datum
 \input{Kapitel_Fallanalyse/Datum.tex}
-% * Invisibly
 \input{Kapitel_Fallanalyse/Invisibly.tex}
 
 \chapter{Auswertung der Fallstudie}
@@ -210,7 +198,9 @@ sorting=nty
 \setcounter{chapter}{1}
 \input{Kapitel_Anlagen/Anlagen.tex}
 
+% ==============================================
 % Endblatt (weiß)
+% ==============================================
 \clearpage
 \thispagestyle{empty}
 \begin{center}
